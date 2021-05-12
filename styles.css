@@ -1,0 +1,277 @@
+body {
+    margin: 0;
+    font-family: 'Lexend Deca', Futura, Arial, sans-serif;
+}
+
+.site-title, header>nav>ul>h2 {
+    font-family: 'Noto Serif';
+}
+
+.sidebar {
+    margin: 0;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(122, 73, 165, 0.6);
+}
+
+.site-title {
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+}
+
+.contact-text {
+    margin: 0;
+    padding-left: 2rem;
+    color: white;
+}
+
+nav {
+    margin-top: -1em;
+}
+
+nav>ul {
+    margin-top: 0;
+}
+
+footer {
+    padding-top: 1.5em;
+    text-align: right;
+}
+
+hr {
+    margin: 0;
+    color: #e4e6e9;
+    size: 1px;
+}
+
+.content {
+    padding-left: 1.8rem;
+    padding-right: 1.5rem;
+}
+
+h3 {
+    margin-top: -0.5em;
+}
+
+.notes {
+    text-align: center;
+}
+
+.plots {
+    display: flex;
+    width: 100%;
+}
+
+.plots>img {
+    width: 50%;
+    height: auto;
+}
+
+*p {
+    clear: both;
+}
+
+section>div>p {
+    text-indent: 2em;
+}
+
+.legend {
+    width: minmax(80%, 240);
+    height: auto;
+}
+
+.views {
+    text-align: center;
+    display: block;
+}
+
+.view {
+    width: 90%;
+    height: auto;
+}
+
+#visualization-demo, #visualization-demo>* {
+    text-align: center;
+    display: none;
+}
+
+
+
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+a:link {
+    color: black;
+}
+
+.contact-text>p>a:any-link {
+    color: white;
+}
+
+nav>ul>h2 {
+    margin-bottom: 0.2em;
+}
+
+nav>ul>li>a:any-link {
+    color: black;
+    text-decoration: none;
+}
+
+.site-title {
+    color: white;
+}
+#demo-btn {
+    display: none;
+}
+
+
+.right {
+    text-align: right; 
+    padding-right: 1em;
+}
+
+
+@media (min-width: 30em) {
+    .sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'a a' 'b d' 'c c';
+    }
+    .view {
+        width: 80%;
+    }
+}
+
+@media (min-width: 70em) {
+    .sidebar {
+        padding-right: 0;
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 360px;
+        border-right: 1px solid #e4e6e9;
+    }
+    nav {
+        margin-top: 0;
+    }
+    nav>ul>h2 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+    nav>ul>li {
+        margin-bottom: 0.8em;
+    }
+    nav>ul>h2>a:any-link {
+        text-decoration: none;
+        color: black;
+    }
+    nav>ul>h2>a:hover {
+        text-decoration: underline white;
+    }
+
+    footer {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+    }
+    hr {
+        opacity: 0;
+    }
+    .content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 361px;
+        overflow-y: auto;
+        padding-left: 3em;
+    }
+    .divide-text {
+        column-count: 2;
+        text-indent: 2em;
+        padding-top: .8em;
+    }
+    section>div>p:first-of-type {
+        margin-top: 0;
+    }
+    .divide-col {
+        display: flex;
+        justify-content: space-between;
+    }
+    .divide-col>section, .divide-col>p {
+        width: 49%;
+    }
+    .divide-co>section>h2 {
+        margin-top: 0;
+    }
+    .video, .dance>img {
+        width: 95%;
+        height: auto;
+    }
+    .legend {
+        width: 45%;
+        height: auto;
+    }
+    .plots {
+        width: 80%;
+        margin: auto;
+    }
+    .view {
+
+        width: 60%;
+        height: auto;
+    }
+    #demo-btn {
+        display: inline;
+        font-family: 'Lexend Deca', Futura, Arial, sans-serif;
+        margin-left: 25em;
+    }
+
+}
+
+
+/*
+    CSS for Visualization Demo
+ */
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 4px;
+    font: 12px sans-serif;
+    background: #93B1C6;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.lineLegend {
+    font-size: 12px;
+    font: sans-serif;
+    text-anchor: start;
+}
+
+
+.year_slider {
+    margin-bottom: 1em;
+}
+
+.year_slider>p {
+    margin: 0;
+    text-indent: -25em;
+}
+
+.sphere {
+    fill: rgb(199, 208, 213);
+    opacity: .8;
+}
+
+

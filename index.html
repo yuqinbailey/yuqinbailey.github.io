@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Bailey Bai: Résumé</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Notable|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href='styles.css'>
+
+</head>
+
+<body>
+    <header class="sidebar">
+        <div style="grid-area: a;">
+            <h1 class="site-title">Yuqin (Bailey) Bai</h1>
+        </div>
+        <div class="contact-text" style="grid-area: b;">
+            <p><a href="mailto:yb1033@nyu.edu" style="text-decoration: none;">yb1033@nyu.edu</a></p>
+            <p>(+86) 13167051067</p>
+        </div>
+        <nav id="nav" style="grid-area: c;">
+            <ul>
+                <h2><a href="#RESEARCH">RESEARCH</a></h2>
+                <li><a href="#DRL">Towards Sample Efficiency and Scalability in DRL</a></li>
+            </ul>
+            <ul>
+                <h2><a href="#PROJECTS">PROJECTS</a></h2>
+                <li><a href="#RLCourse">Bias Reduction: Clipped Double Q VS. Multi-Step Method</a></li>
+                <li><a href="#IV">Global Terrorism during 1970-2017</a></li>
+                <li><a href="#DB">Flight Ticket Booking Site</a></li>
+            </ul>
+            <ul>
+                <h2><a href="#WORK">WORKING EXPERIENCE</a></h2>
+                <li><a href="#TA">Teaching Assistant</a></li>
+                <li><a href="#BGen">Impact Analyst</a></li>
+            </ul>
+        </nav>
+
+        <footer style="grid-area: d;">
+            <a href="mailto:yb1033@nyu.edu"><img src="../logos/email.png" alt="Email me" width=48 height=48></a>
+            <a href="https://www.linkedin.com/in/yuqin-bai-yb033/"><img src="../logos/linkedin.png" alt="LinkedIn"
+                    width=48 height=48></a>
+            <a href="https://github.com/yuqinbailey"><img src="../logos/github.png" alt="GitHub" width=48 height=48></a>
+            <a href="https://www.instagram.com/yuqinbailey/"><img src="../logos/ins.png" alt="Instagram" width=48
+                    height=48></a>
+        </footer>
+
+    </header><!-- .sidebar -->
+    <hr>
+    <main class="content">
+        <h1 id="RESEARCH">RESEARCH</h1>
+        <h2 id="DRL">Towards Sample Efficiency and Scalability in Deep Reinforcement Learning</h2>
+        <section class="divide-col">
+            <div>
+            <h3><a href="https://shanghai.nyu.edu/academics/undergraduate-research">Deans' Undergraduate Research
+                    Fund</a></h3>
+            <h3>Advisor: <a href="https://sites.google.com/nyu.edu/keithross/">Keith Ross</a>, Dean of Engineering and
+                Computer Science, NYU Shanghai</h3>
+            </div>
+            
+            <ul>
+                <li>Perused more than 25 papers for top AI conferences(ICML, ICRL, NeurIPS), studied state-of-the-art
+                    algorithms (SAC, SOP, DDPG, TD3, MAML, etc.)
+                </li>
+                <li>Evaluated the sample efficiency of online algorithms in OpenAI Gym MuJoCo physics engine, performed
+                    more than 6 sets of hyperparameter optimization experiments in Hopper environment, and trained
+                    average reward algorithms to compete the corresponding discounted reward baselines
+                </li>
+                <li>Developed probabilistic model-agnostic meta-learning algorithm and offline batch reinforcement
+                    learning algorithm by introducing the probabilistic context and metric learning methods into
+                    meta-learning, and generated 3 algorithm analysis reports including pseudocodes
+                </li>
+            </ul>
+        </section>
+        <h1 id="PROJECTS">COURSE PROJECTS</h1>
+        <section id="RLCourse">
+            <h2>Bias Reduction: Clipped Double Q VS. Multi-Step Method</h2>
+            <h3>Final Project for <I>CSCI-SHU 375 reinforcement Learning</I></h3>
+            <p class="divide-text">
+                In actor-critic setting, Twin Delayed Deep Deterministic policy gradient algorithm (TD3) decelerates the
+                overestimation bias by introducing a clipped variant of Double Q-leaning and achieves better results
+                than
+                Deep Deterministic Policy Gradient (DDPG). Another method proposed for bias reduction is Multi-step DDPG
+                (MDDPG) which has comparable performance and is more computationally efficient than TD3.
+                Our method builds on top of Soft algorithm Actor-Critic (SAC), which incorporates the clipped double Q
+                target estimates and entropy maximization. We propose Multi-step SAC with Single Q target estimate
+                (MSAC-Single) for our empirical studies on the effect of removing clipped double Q estimates from SAC
+                and
+                whether we can use multi-step method instead to get the same performance. Additionally, we also examine
+                the
+                performance of multi-step SAC (MSAC) with both bias reduction methods and make run time comparisons.
+            </p>
+            <div class="notes"><img class="legend" alt="Legend" width=300 height=20 src="images/legend1.png"
+                    srcset="images/legend1-2x.png 2x">
+                <div class="plots">
+                    <img class="plot" alt="Performance plot" width=320 height=240 src="images/Figure1.png"
+                        srcset="images/Figure1-2x.png 2x">
+                    <img class="plot" alt="Performance plot" width=320 height=240 src="images/Figure4.png"
+                        srcset="images/Figure4-2x.png 2x">
+                </div>
+                <p>Performances of SAC, 5-step SAC (MSAC(5)), SAC with Single Q target estimate (SAC-Single),<br>
+                    5-step SAC with Single Q target estimate (MSAC-Single(5)).</p>
+            </div>
+            <br>
+            <div class="notes"><img class="legend" alt="Legend" width=300 height=15 src="images/legend2.png"
+                    srcset="images/legend2-2x.png 2x">
+                <div class="plots">
+                    <img class="plot" alt="Performance plot" width=320 height=240 src="images/Figure8.png"
+                        srcset="images/Figure8-2x.png 2x">
+                    <img class="plot" alt="Performance plot" width=320 height=240 src="images/Figure10.png"
+                        srcset="images/Figure10-2x.png 2x">
+                </div>
+                <p>SAC compared to MSAC with different step length (n=2, 5, 8) in terms of performance.</p>
+            </div>
+            <p class="divide-text">
+                Overestimated value function has been identified as a critical problem in actor-critic methods.
+                In this project, we empirically study the effectiveness of two bias reduction techniques: clipped double
+                Q
+                and multi-step methods by proposing two SAC variants, Multi-step Soft Actor-Critic with Single Q target
+                estimate (MSAC-Single) and Multi-step Soft Actor-Critic (MSAC). We provide experimental evidence on the
+                effects of removing the clipped double Q method and replacing it with multi-step method using
+                MSAC-Single,
+                which replaces the second Q target estimate with multi-step bootstrapping. Additionally, we examine the
+                performance of MSAC with both the clipped variant of Double Q-learning and the multi-step methods.
+                Results
+                show that removing the clipped double Q component from SAC leads to a significant performance drop.
+                Applying multi-step methods to SAC helps to alleviate the overestimation bias and improve performance,
+                but
+                it is unable to achieve the same result as the clipped double Q method. If we apply the multi-step
+                method to
+                SAC with clipped double Q target estimates, the performances decrease compared to the original SAC. This
+                is
+                because both methods are trying to reduce the estimation bias to reduce overestimation, which induces an
+                underestimation.
+            </p>
+        </section>
+
+        <section id="IV">
+            <h2><a href="https://github.com/yuqinbailey/Global_Terrorism_Visualization">
+                    Global Terrorism during 1970-2017
+                </a> 
+                <button type="button" id="demo-btn">See a simplified demo</button>
+            </h2>
+            <h3>Final Project for <I>CSCI-SHU 235 Information Visualization</I></h3>
+            <div class="views">
+                <img class="view" alt="First view of the visualization" width=500 height=285 src="images/iv-view1.png"
+                    srcset="images/iv-view1-2x.png 2x">
+                <img class="view" alt="Second view of the visualization" width=500 height=285 src="images/iv-view2.png"
+                    srcset="images/iv-view2-2x.png 2x">
+            </div>
+            <div id="visualization-demo">
+                <svg class="map" width="900" height="730"></svg>
+                <div class="year_slider">
+                    <p>Year: </p>
+                    <input id='slider' type='range' min='2000' max='2017' value='2000' step='1' style="width: 350px;">
+                    <output id="slidertext" style="margin-bottom: 0px;">2000</output>
+                </div>
+            </div>
+
+            <div class="divide-text">
+                <p>
+                    To appeal for wider attention on such heinous action and contempt for life, Yirong Mao and I
+                    propose a
+                    visualization system,
+                    which helps the users to gain a more comprehensive view of the terrorism attacks happened during
+                    1970-2017,
+                    as well as
+                    provides the functionalities to view accurate number and make comparisons across different
+                    countries.
+                </p>
+
+                <p>
+                    The world map has two views, and the users can transform from these two views by the "change
+                    view"
+                    button
+                    and select a specific year from 1970 to 2017 using the slider.
+                    One view is that different countries will be painted with different color saturations from the
+                    red color
+                    palette according to the amount of terrorist attacks of that country in that year. The redder,
+                    the more
+                    terrorist attacks of that country, and vice versa. Most countries barely have terrorism attacks,
+                    but a
+                    few
+                    countries have a couple of thousands in amount. So we use a logarithmic color scale for better
+                    readability.
+                    When the user hovers over the region of a country, it will show a tooltip with that country’s
+                    name and
+                    the
+                    number of terrorist attacks that year. The stroke will also become red for better identification
+                    when
+                    hovered.
+                    The other view is a world map with a single background color. Those cities where terrorist
+                    attacks
+                    happened
+                    will be marked by the point marks. The position of point will show the attack’s location, the
+                    color
+                    saturation of point will show the number of people killed during that attack. When the user
+                    hovers over
+                    the
+                    point, it will also show the city name, and accurate number of people being killed.
+                </p>
+                <p>
+                    On the right, there is a brief introduction of global terrorism. Below the overview, there is a
+                    line
+                    chart
+                    showing the change of countries’ terrorist attack numbers through 1970 to 2017. Users can click
+                    the
+                    territory of couples of countries from the left part, and each line will show one country’s
+                    trend of
+                    terrorist attack numbers. After being clicked and chosen, the stroke of the country will change
+                    to
+                    green.
+                    In the line chart, there is a legend about the color hue and corresponding country. Users can
+                    compare
+                    different countries’ changes in one view. Users can empty the lines by clicking the "clear"
+                    button and
+                    choose new ones. Additionally, hovering on the line will also show the country name.
+                </p>
+            </div>
+        </section>
+        <section id="DB">
+            <h2><a href="https://github.com/yuqinbailey/Flight-Ticket-Booking-Site">
+                    Flight Ticket Booking Site
+                </a></h2>
+            <h3>Final Project for <I>CSCI-SHU 213 Databases</I></h3>
+            <div class="divide-col">
+                <p>Built a web application with the core server of more than 1,000 lines of code using Flask and SQL,
+                    which
+                    has different use cases and allows users to manage and search for flight tickets and records
+                </p>
+                <p></p>
+            </div>
+        </section>
+        <h1 id="WORK">WORKING EXPERIENCE</h1>
+        <div class="divide-col">
+            <section id="TA">
+                <h2>Teaching Assistant</h2>
+                <h3><a href="https://stern.hosting.nyu.edu/courses/ai21sp/"><I>BUSF-SHU 271 Artificial Intelligence for
+                            Business</I></a></h3>
+                <h3>Advisor: <a href="https://stern.hosting.nyu.edu/abrahao/">Bruno Abrahao</a>, Assistant Professor of
+                    Information Systems and Business Analytics, NYU Shanghai</h3>
+                <ul>
+                    <li>Coach a recitation of 75 minutes and 2 hours of office hours every week;
+                    </li>
+                    <li>Implement code examples of algorithms such as perceptron, policy gradient, etc. to help the
+                        students
+                        develop a better understanding of Markov decision process and deep learning;
+                    </li>
+                    <li>Actively collaborate with professor and arrange slides, more than 5 coding exercises, and 3
+                        quizzes
+                        to improve the overall efficiency of the course
+                    </li>
+                </ul>
+            </section>
+            <section id="BGen">
+                <h2>Impact Analyst</h2>
+                <h3><I>B Generation Measure What Matters Program (B-Corp)</I></h3>
+                <ul>
+                    <li>Worked with 4 other team members to conduct a desk study of social innovation industry-standard
+                        benchmark; Surveyed and completed the B Impact Assessment consisted of 219 questions for the
+                        client
+                    </li>
+                    <li> Strategized improvement plan based on descriptive analysis and quantitative analysis, and
+                        helped
+                        the client company improve the B Impact by 23%
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v3.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
